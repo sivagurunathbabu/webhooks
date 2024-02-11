@@ -1,12 +1,8 @@
-# Use an official Jenkins base image
-FROM jenkins/jenkins:lts
+# Use an official Jenkins base image that includes OpenJDK
+FROM jenkins/jenkins:lts-jdk11
 
 # Switch to root user to install additional tools
 USER root
-
-# Install OpenJDK
-RUN apt-get update && \
-    apt-get install -y openjdk-11-jdk
 
 # Install Maven
 ARG MAVEN_VERSION=3.8.4
@@ -33,6 +29,7 @@ USER jenkins
 # Copy your Jenkins job configurations, if any
 # COPY jobs/ /var/jenkins_home/jobs/
 
+# You can add additional customization or configurations here
 
 # Expose the necessary ports
 EXPOSE 8080
