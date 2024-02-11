@@ -33,7 +33,6 @@ USER jenkins
 # Copy your Jenkins job configurations, if any
 # COPY jobs/ /var/jenkins_home/jobs/
 
-# You can add additional customization or configurations here
 
 # Expose the necessary ports
 EXPOSE 8080
