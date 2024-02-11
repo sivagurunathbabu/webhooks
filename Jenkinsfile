@@ -1,12 +1,7 @@
 pipeline {
     agent any
 
-   // tools {
-        // Define the JDK and Maven installations
-     //   jdk 'JDK'
-       // maven 'Maven'
-    //}
-
+   
     stages {
         stage('Checkout') {
             steps {
@@ -19,8 +14,8 @@ pipeline {
             steps {
                 // Build the Maven project
                 script {
-                    def mavenCMD = tool 'Maven'
-                    sh "${mavenCMD}/bin/mvn clean install"
+                    
+                    sh "mvn clean install"
                 }
             }
         }
@@ -29,8 +24,8 @@ pipeline {
             steps {
                 // Run Maven test phase
                 script {
-                    def mavenCMD = tool 'Maven'
-                    sh "${mavenCMD}/bin/mvn test"
+                    
+                    sh "mvn test"
                 }
             }
         }
