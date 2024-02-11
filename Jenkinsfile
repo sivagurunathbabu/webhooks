@@ -1,11 +1,11 @@
 pipeline {
     agent any
 
-    tools {
+   // tools {
         // Define the JDK and Maven installations
-        jdk 'JDK'
-        maven 'Maven'
-    }
+     //   jdk 'JDK'
+       // maven 'Maven'
+    //}
 
     stages {
         stage('Checkout') {
