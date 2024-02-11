@@ -24,7 +24,6 @@ pipeline {
             steps {
                 // Run Maven test phase
                 script {
-                    
                     sh "mvn test"
                 }
             }
