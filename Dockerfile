@@ -8,6 +8,7 @@ USER root
 ARG MAVEN_VERSION=3.8.4
 ARG USER_HOME_DIR="/root"
 
+# Download and install Maven
 RUN apt-get update && \
     apt-get install -y curl && \
     mkdir -p /usr/share/maven /usr/share/maven/ref && \
